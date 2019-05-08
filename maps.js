@@ -1,6 +1,6 @@
 const myMap = new Map();
 
-// we can use ref. types and funcs as key
+// we can use primitive and ref. types as key
 let a = {};
 const b = {
     id: 1,
@@ -27,7 +27,7 @@ for (const [key, value] of myMap) {
 }
 
 // Map still holds reference to the object
-// as a variable previously
+// as 'a' variable previously
 // and because of that, the object cannot be
 // removed from memory by GC
 
@@ -50,7 +50,6 @@ weakMap.set(myObj, 'my object');
 console.log(weakMap.has(myObj));
 
 myObj = null;
-
 // or - delete myObj
 // because only weak map holds reference
 // to the object, it will be released from
